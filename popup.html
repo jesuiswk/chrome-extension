@@ -9,9 +9,33 @@
 <body>
     <div class="container">
         <h1>My Chrome Extension</h1>
-        <p>Welcome to your new Chrome extension!</p>
-        <button id="actionBtn">Click me!</button>
-        <div id="result"></div>
+
+        <!-- Login View -->
+        <div id="loginView" class="view">
+            <p>Please login to continue</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" id="loginBtn">Login</button>
+                <div id="loginError" class="error"></div>
+            </form>
+        </div>
+
+        <!-- Logged In View -->
+        <div id="loggedInView" class="view" style="display: none;">
+            <div id="userInfo">
+                <p>Welcome, <strong id="userName"></strong>!</p>
+            </div>
+            <button id="fillFormBtn" class="action-btn">Fill Form on Page</button>
+            <button id="logoutBtn" class="secondary-btn">Logout</button>
+            <div id="status"></div>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>

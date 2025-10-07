@@ -1,6 +1,6 @@
 body {
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    min-height: 250px;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,13 +8,13 @@ body {
 
 .container {
     padding: 20px;
-    text-align: center;
 }
 
 h1 {
     color: #333;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 p {
@@ -23,25 +23,104 @@ p {
     margin-bottom: 15px;
 }
 
+/* Form styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+/* Button styles */
 button {
     background-color: #4285f4;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 button:hover {
     background-color: #3367d6;
 }
 
-#result {
-    margin-top: 15px;
-    padding: 10px;
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.action-btn {
+    background-color: #34a853;
+}
+
+.action-btn:hover {
+    background-color: #2d8e47;
+}
+
+.secondary-btn {
+    background-color: #ea4335;
+}
+
+.secondary-btn:hover {
+    background-color: #c5362d;
+}
+
+/* User info */
+#userInfo {
     background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#userInfo p {
+    margin: 0;
+}
+
+/* Status and error messages */
+#status, .error {
+    margin-top: 10px;
+    padding: 10px;
     border-radius: 4px;
     font-size: 12px;
-    color: #333;
+    text-align: center;
+}
+
+#status {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.error:empty, #status:empty {
+    display: none;
 }
